@@ -101,18 +101,3 @@ TEST(TVector, two_vectors_can_be_compare)
 	EXPECT_FALSE(v1 == v2);
 }
 
-TEST(TVector, can_Resize)
-{
-	TVector<int> v1(5, 7);
-	TVector<int> v2(5, 7);
-	v1.Resize(4);
-	v2.Resize(7);
-
-	EXPECT_EQ(4, v1.GetSize());
-	for (int i = 0; i < v1.GetSize(); i++)
-		EXPECT_EQ(7, v1[i]);
-
-	EXPECT_EQ(7, v2.GetSize());
-	for (int i = 0; i < 5; i++)
-		EXPECT_EQ(7, v2[i]);
-}
